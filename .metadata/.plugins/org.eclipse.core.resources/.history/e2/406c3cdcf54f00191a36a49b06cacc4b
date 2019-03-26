@@ -1,0 +1,9 @@
+package br.senai.rn.agenda.model;
+
+public class Contato {
+	
+	String nome;
+	String fone;
+	String email;
+	
+}
