@@ -1,0 +1,10 @@
+package br.senai.rn.agenda.model;
+
+import br.senai.rn.agenda.enums.TipoEmail;
+
+public class Email {
+	
+	private String email;
+	private TipoEmail tipoEmail;
+
+}

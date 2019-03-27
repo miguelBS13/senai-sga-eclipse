@@ -1,0 +1,22 @@
+package br.senai.rn.agenda.dao;
+
+import java.util.List;
+
+import br.senai.rn.agenda.model.Fone;
+
+public class FoneDAO {
+
+	private static List<Fone> fones;
+	
+	public void salvar(Fone fone) {}
+	
+	public void editar(Fone fone) {}
+	
+	public Fone buscar() {
+		return null;
+	}
+	
+	public Fone buscarTodos() {
+		return null;
+	}
+}

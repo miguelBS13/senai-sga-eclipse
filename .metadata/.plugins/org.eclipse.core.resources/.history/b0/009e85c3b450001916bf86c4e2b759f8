@@ -1,0 +1,35 @@
+package br.senai.rn.agenda.model;
+
+import br.senai.rn.agenda.enums.TipoFone;
+
+public class Fone {
+	
+	private String fone;
+	private TipoFone tipo;
+	
+	public Fone() {}
+
+	public Fone(String fone, TipoFone tipo) {
+		this.fone = fone;
+		this.tipo = tipo;
+	}
+
+	public String getFone() {
+		return fone;
+	}
+
+	public void setFone(String fone) {
+		fone = fone;
+	}
+
+	public TipoFone getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoFone tipo) {
+		this.tipo = tipo;
+	}
+
+
+	
+}

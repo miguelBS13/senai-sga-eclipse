@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.model.Email"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.enums.TipoEmail"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.enums.TipoFone"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.model.Fone"/>
+<fullyQualifiedTypeName name="sun.tools.tree.ArrayAccessExpression"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
