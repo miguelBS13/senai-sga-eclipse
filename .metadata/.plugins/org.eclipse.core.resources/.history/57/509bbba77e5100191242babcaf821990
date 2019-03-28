@@ -1,0 +1,9 @@
+package br.senai.rn.agenda.dao;
+
+public class TestaEmailDAO {
+
+	public static void main(String[] args) {
+		
+		
+	}
+}

@@ -1,0 +1,24 @@
+package br.senai.rn.agenda.dao;
+
+import br.senai.rn.agenda.model.Email;
+
+public class TestaEmailDAO {
+
+	public static void main(String[] args) {
+		
+		EmailDAO dao = new EmailDAO();
+		
+		dao.salvar(new Email("1112-3454",TipoFone.FIXO));
+		dao.salvar(new Email("3333-4444",TipoFone.FIXO));
+		
+		System.out.println(dao.buscarTodos());
+		
+		dao.editar(new Email("1112-3454",TipoFone.FIXO),new Email("1112-3454",TipoFone.CELULAR));
+		
+		System.out.println(dao.buscarTodos());
+		
+		dao.excluir(new Email("1112-3454",TipoFone.CELULAR));
+		
+		System.out.println(dao.buscarTodos());	
+	}
+}

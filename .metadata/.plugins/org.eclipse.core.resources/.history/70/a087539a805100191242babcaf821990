@@ -1,0 +1,23 @@
+package br.senai.rn.agenda.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.senai.rn.agenda.model.Contato;
+
+public class ContatoDAO {
+
+	private static List<Contato> contatos = new ArrayList<Contato>();
+	
+	public void salvar(Contato contato ) {
+		if(!contatos.contains(contato)) {
+			contatos.add(contato);
+		}
+	}
+	
+	public void editar(Contato contatoAtual, Contato contatoNovo) {
+		if(contatos.contains(contato)) {
+			contatos);
+		}
+	}
+}

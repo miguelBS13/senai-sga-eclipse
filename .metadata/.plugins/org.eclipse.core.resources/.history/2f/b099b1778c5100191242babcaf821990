@@ -1,0 +1,10 @@
+package br.senai.rn.agenda.dao;
+
+import br.senai.rn.agenda.enums.TipoEmail;
+import br.senai.rn.agenda.model.Email;
+
+public class TestaEmailDAO {
+
+	
+	
+}

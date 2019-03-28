@@ -1,0 +1,7 @@
+package br.senai.rn.agenda.dao;
+
+import br.senai.rn.agenda.model.Fone;
+
+public class FoneDAO extends GenericDAO<Fone> {
+
+}

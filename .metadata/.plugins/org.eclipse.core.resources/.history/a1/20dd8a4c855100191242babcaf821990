@@ -1,0 +1,25 @@
+package br.senai.rn.agenda.dao;
+
+
+import br.senai.rn.agenda.model.Contato;
+
+public class TestaContatoDAO {
+	public static void main(String[] args) {
+		
+		ContatoDAO dao = new ContatoDAO();
+		
+		dao.salvar(new Contato("Miguel", null, null));
+		dao.salvar(new Contato("Marcos", null, null));
+		
+		System.out.println(dao.buscarTodos());
+		
+		dao.editar(new Contato("Marcos", null, null),new Contato("Juliana", null, null));
+		
+		System.out.println(dao.buscarTodos());
+		
+		dao.excluir(new Contato("1112-3454",TipoFone.CELULAR));
+		
+		System.out.println(dao.buscarTodos());	
+	}
+	
+}

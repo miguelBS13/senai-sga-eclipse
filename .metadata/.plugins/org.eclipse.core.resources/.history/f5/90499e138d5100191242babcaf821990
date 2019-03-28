@@ -1,0 +1,14 @@
+package br.senai.rn.agenda.dao;
+
+import br.senai.rn.agenda.model.Email;
+
+public class TestaEmailDAO {
+
+	public static void main(String[] args) {
+		
+		EmailDAO dao = new EmailDAO();
+		
+		Email e1 = new Email();
+		e1.setEmail("miguelbarbosa@gmail.com");
+	}
+}

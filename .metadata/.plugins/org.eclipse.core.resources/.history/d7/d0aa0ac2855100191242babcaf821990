@@ -1,0 +1,6 @@
+package br.senai.rn.agenda.dao;
+
+public interface PersistDB {
+
+	
+}

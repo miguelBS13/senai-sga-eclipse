@@ -1,0 +1,17 @@
+package br.senai.rn.agenda.dao;
+
+import br.senai.rn.agenda.model.Contato;
+
+public class TestaContatoDAO {
+	
+	public static void main(String[] args) {
+		
+		ContatoDAO dao = new ContatoDAO();
+		
+		Contato c1 = new Contato();
+		c1.setNome("Miguel");
+		
+		dao.salvar(c1);
+	
+	}
+}

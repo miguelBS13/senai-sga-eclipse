@@ -1,0 +1,40 @@
+package br.senai.rn.agenda.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.senai.rn.agenda.model.Email;
+
+
+
+public class EmailDAO {
+
+	private static List<Email> emails = new ArrayList<Email>();
+	
+	public void salvar(Email email) {
+		if(!emails.contains(email)) {
+			emails.add(email);
+		}
+	}
+	
+	public void editar(Email EmailAtual, Email EmailNovo) {
+		if(emails.contains(EmailAtual)) {
+			emails.set(emails.indexOf(EmailAtual), EmailNovo);
+		}
+	}
+	
+	public void excluir(Email email) {
+		if(emails.contains(email)) {
+			emails.remove(email);
+		}
+	}
+	
+	public Email buscar(String email) {
+		
+		return emails.get(emails.indexOf(new Email(email, null)));	
+	}
+	
+	public List<Email> buscarTodos(){
+		
+	}
+}

@@ -1,0 +1,15 @@
+package br.senai.rn.agenda.dao;
+
+import java.util.List;
+
+import br.senai.rn.agenda.model.Email;
+import br.senai.rn.agenda.model.Fone;
+
+public class EmailDAO {
+
+	private static List<Email> emails = new ArrayList<Email>();
+	
+	public void salvar(Email email) {
+		
+	}
+}

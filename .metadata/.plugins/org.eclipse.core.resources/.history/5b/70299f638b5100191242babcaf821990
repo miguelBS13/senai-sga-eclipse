@@ -1,0 +1,17 @@
+package br.senai.rn.agenda.dao;
+
+import br.senai.rn.agenda.enums.TipoFone;
+import br.senai.rn.agenda.model.Fone;
+
+public class TestaFoneDAO {
+
+	public static void main(String[] args) {
+		
+		FoneDAO dao = new FoneDAO();
+		
+		Fone f1 = new Fone();
+		f1.setFone("2131-3432");
+		f1.setTipoFone(TipoFone.FIXO);
+		
+	}
+}

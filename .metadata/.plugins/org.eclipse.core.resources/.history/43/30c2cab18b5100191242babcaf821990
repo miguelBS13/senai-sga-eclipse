@@ -1,0 +1,8 @@
+package br.senai.rn.agenda.dao;
+
+import br.senai.rn.agenda.model.Email;
+
+public class EmailDAO extends GenericDAO<Email> {
+
+	
+}

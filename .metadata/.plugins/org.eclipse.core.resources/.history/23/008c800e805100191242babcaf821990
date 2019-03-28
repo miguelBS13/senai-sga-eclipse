@@ -1,0 +1,12 @@
+package br.senai.rn.agenda.dao;
+
+import br.senai.rn.agenda.model.Contato;
+
+public class ContatoDAO {
+
+	private static Contato contatos = new Contato();
+	
+	public void salvar(Contato contato ) {
+		
+	}
+}
