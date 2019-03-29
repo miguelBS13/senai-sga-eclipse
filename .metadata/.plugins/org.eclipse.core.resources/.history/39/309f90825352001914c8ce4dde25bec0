@@ -1,0 +1,26 @@
+package br.senai.rn.agenda.services;
+
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import br.senai.rn.agenda.dao.EmailDAO;
+import br.senai.rn.agenda.model.Email;
+
+public class EmailServices {
+
+	private EmailDAO dao = new EmailDAO();
+
+	public void salvar(Email email) {
+		if(ObjectUtils.allNotNull(email) || StringUtils.isNotEmpty(email.getEmail())) {			
+			dao.salvar(email);
+			return true;
+		}
+	}
+
+	public void excluir(Email email) {
+		dao.excluir(email);
+	}
+	
+	
+	
+}

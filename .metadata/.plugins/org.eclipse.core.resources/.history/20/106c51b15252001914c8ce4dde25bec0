@@ -1,0 +1,5 @@
+package br.senai.rn.agenda.services;
+
+public class ContatoServices {
+
+}

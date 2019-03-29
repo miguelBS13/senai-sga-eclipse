@@ -1,0 +1,10 @@
+package br.senai.rn.agenda.services;
+
+import br.senai.rn.agenda.dao.FoneDAO;
+
+public class FoneServices {
+
+	private FoneDAO dao = new FoneDAO();
+	
+	public Boolean salvar(Fone)
+}

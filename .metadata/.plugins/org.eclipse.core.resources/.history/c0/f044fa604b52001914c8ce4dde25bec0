@@ -1,0 +1,19 @@
+package br.senai.rn.agenda.services;
+
+import org.apache.commons.lang3.StringUtils;
+
+import br.senai.rn.agenda.dao.FoneDAO;
+import br.senai.rn.agenda.model.Fone;
+
+public class FoneServices {
+
+	private FoneDAO dao = new FoneDAO();
+	
+	public Boolean salvar(Fone fone) {
+		if(StringUtils.isNotEmpty(fone.getFone())) {
+			dao.salvar(fone);
+			return true;
+		}
+		return false;
+	}
+}

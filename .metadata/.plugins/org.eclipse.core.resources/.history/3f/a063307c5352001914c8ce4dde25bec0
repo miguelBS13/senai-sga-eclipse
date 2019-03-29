@@ -1,0 +1,11 @@
+package br.senai.rn.agenda.services;
+
+import br.senai.rn.agenda.dao.EmailDAO;
+
+public class EmailServices {
+
+	private EmailDAO dao = new EmailDAO();
+	
+	
+	
+}
