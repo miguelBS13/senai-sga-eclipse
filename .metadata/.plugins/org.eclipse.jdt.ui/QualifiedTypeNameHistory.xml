@@ -2,14 +2,18 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="sun.tools.tree.ArrayAccessExpression"/>
-<fullyQualifiedTypeName name="br.senai.rn.agenda.dao.EmailDAO"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.dao.PersistDB"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="br.senai.rn.agenda.model.Fone"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.enums.TipoFone"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.dao.GenericDAO"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.model.Contato"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.model.Email"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.enums.TipoEmail"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.dao.FoneDAO"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.model.Fone"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.dao.ContatoDAO"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.dao.EmailDAO"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang3.ObjectUtils"/>
 </qualifiedTypeNameHistroy>
