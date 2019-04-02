@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.enums.TipoFone"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.dao.GenericDAO"/>
-<fullyQualifiedTypeName name="br.senai.rn.agenda.model.Contato"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.model.Email"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.enums.TipoEmail"/>
 <fullyQualifiedTypeName name="br.senai.rn.agenda.dao.FoneDAO"/>
@@ -16,4 +15,24 @@
 <fullyQualifiedTypeName name="br.senai.rn.agenda.dao.EmailDAO"/>
 <fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
 <fullyQualifiedTypeName name="org.apache.commons.lang3.ObjectUtils"/>
+<fullyQualifiedTypeName name="org.springframework.util.ObjectUtils"/>
+<fullyQualifiedTypeName name="com.mysql.cj.util.StringUtils"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.repositories.ContatoRepository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.services.ContatoService"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PatchMapping"/>
+<fullyQualifiedTypeName name="br.senai.rn.agenda.model.Contato"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 </qualifiedTypeNameHistroy>
