@@ -11,15 +11,15 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <fieldset>
                     <legend>Cadastro</legend>
-                    <form th:object="${contato}" method="POST">
+                    <form th:action="@{/contato}" th:object="${contato}" method="POST">
                         <div class="form-group">
                             <label for="nome">Nome</label>
                             <input type="text" name="nome" id="nome" th:value="*{nome}" th:field="*{nome}" class="form-control" placeholder="Nome">
                         </div>
-                        <div class="formu-group">
+                        <div class="form-group">
                             <label for="fone">Fone</label>
                             <input type="text" name="fone" id="fone" th:value="*{fones}" th:field="*{fones}" class="form-control" placeholder="Fone ">
                         </div>
@@ -40,38 +40,44 @@
                     </form>
                 </fieldset>
             </div>
-            <div class="col-6">
-                <table class="table" >
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nome</th>
-                            <th>Fone</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="contato : ${contatos}">
-                            <td th:text="${contato.id}"></td>
-                            <td th:text="${contato.nome}"></td>
-                            <td th:text="${contato.fones}"></td>
-                            <td th:text="${contato.emails}"></td>
-                            <td>
-                                <a th:href="@{/editar/{id}(id=${contato.id})}" class="btn btn-success">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <a th:href="@{/excluir/{id}(id=${contato.id})}" class="btn btn-danger">
-                                    <i class="fas fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="col-8">
+                <fieldset>
+                    <legend>Lista de Contatos</legend>
+                    <table class="table" >
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nome</th>
+                                <th>Fone</th>
+                                <th>Email</th>
+                                <th>Editar</th>
+                                <th>Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="contato : ${contatos}">
+                                <td th:text="${contato.id}"></td>
+                                <td th:text="${contato.nome}"></td>
+                                <td th:text="${contato.fones}"></td>
+                                <td th:text="${contato.emails}"></td>
+                                <td>
+                                    <a th:href="@{/contato/editar/{id}(id=${contato.id})}" class="btn btn-success">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a th:href="@{/contato/remover/{id}(id=${contato.id})}" class="btn btn-danger" onclick="confirmar();">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
             </div>
         </div>
     </div>
+    <script th:src="@{/js/script.js}"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
