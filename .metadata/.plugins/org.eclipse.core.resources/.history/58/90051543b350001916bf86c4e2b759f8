@@ -1,8 +1,0 @@
-package br.senai.rn.agenda.model;
-
-import br.senai.rn.agenda.enums.TipoFone;
-
-public class Fone {
-	private String Fone;
-	private TipoFone tipo;
-}

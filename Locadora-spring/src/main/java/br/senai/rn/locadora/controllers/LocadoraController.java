@@ -1,4 +1,4 @@
-package br.senai.rn.agenda.controllers;
+package br.senai.rn.locadora.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,53 +8,45 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.senai.rn.agenda.model.Contato;
-import br.senai.rn.agenda.services.ContatoService;
+import br.senai.rn.locadora.model.Locadora;
+import br.senai.rn.locadora.services.LocadoraService;
 
 @Controller
-@RequestMapping("/contato")
-public class ContatoController {
-	
+@RequestMapping("/locadora")
+public class LocadoraController {
+
 	@Autowired
-	private ContatoService service;
+	private LocadoraService service;
 	
 	@GetMapping
 	public String index(Model model) {
-		model.addAttribute("contato",new Contato());
-		model.addAttribute("contatos", service.BuscarTodos());
+		model.addAttribute("locadora",new Locadora());
+		model.addAttribute("locadoras", service.BuscarTodos());
 		return "index";
 	}
 	
 	@PostMapping
-	public String salvar(Contato contato) {
-		service.Salvar(contato);
-		return "redirect:/";
+	public String salvar(Locadora locadora) {
+		service.Salvar(locadora);
+		return "redirect:/locadora";
 	}
 	
 	@GetMapping("/editar/{id}")
 	public String editar(@PathVariable Long id, Model model) {
-		model.addAttribute("contato",service.Buscar(id));
-		model.addAttribute("contatos", service.BuscarTodos());
+		model.addAttribute("locadora",service.Buscar(id));
+		model.addAttribute("locadoras", service.BuscarTodos());		
 		return "index";
 	}
 	
 	@PostMapping("/editar/{id}")
-	public String save(@PathVariable Long id, Contato contato) {
-		service.Salvar(contato);
+	public String save(@PathVariable Long id, Locadora locadora) {
+		service.Salvar(locadora);
 		return "redirect:/";
 	}
-	
-	/*
-	@GetMapping("/excluir/{id}")
-	public String excluir(@PathVariable Long id, Contato contato) {
-		service.remover(contato);
-		return "redirect:/";
-	}*/
 	
 	@GetMapping("/remover/{id}")
 	public String remover(@PathVariable Long id, Model model) {
 		service.removerPorId(id);
-		return "redirect:/";
+		return "redirect:/locadora";
 	}
-	
 }

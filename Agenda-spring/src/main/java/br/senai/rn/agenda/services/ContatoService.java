@@ -29,6 +29,10 @@ public class ContatoService {
 	public void remover(Contato contato) {
 		repository.delete(contato);
 	}
+
+	public void removerPorId(Long id) {
+		repository.deleteById(id);
+	}
 	
 	
 
