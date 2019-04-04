@@ -38,12 +38,6 @@ public class LocadoraController {
 		return "index";
 	}
 	
-	@PostMapping("/editar/{id}")
-	public String save(@PathVariable Long id, Locadora locadora) {
-		service.Salvar(locadora);
-		return "redirect:/";
-	}
-	
 	@GetMapping("/remover/{id}")
 	public String remover(@PathVariable Long id, Model model) {
 		service.removerPorId(id);

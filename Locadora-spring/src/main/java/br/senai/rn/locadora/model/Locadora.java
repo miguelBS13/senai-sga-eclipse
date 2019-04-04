@@ -6,15 +6,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name = "Loc")
 @Table(name = "Locadora")
-public class Locadora {
+public class Locadora implements Comparable<Locadora> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String valor;
+	private Boolean ativo;
+	
+	@SuppressWarnings("deprecation")
+	public Locadora() {
+		ativo = new Boolean(true);
+	}
 	
 	public Long getId() {
 		return id;
@@ -33,6 +39,12 @@ public class Locadora {
 	}
 	public void setValor(String valor) {
 		this.valor = valor;
+	}	
+	public Boolean getAtivo() {
+		return ativo;
+	}
+	public void setAtivo(Boolean ativo) {
+		this.ativo = ativo;
 	}
 	
 	@Override
@@ -61,6 +73,11 @@ public class Locadora {
 	@Override
 	public String toString() {
 		return "Locadora [id=" + id + ", nome=" + nome + ", valor=" + valor + "]";
+	}
+	
+	@Override
+	public int compareTo(Locadora locadora) {
+		return this.id.compareTo(locadora.id);
 	}
 	
 }

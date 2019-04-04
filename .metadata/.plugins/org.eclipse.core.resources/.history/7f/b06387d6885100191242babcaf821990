@@ -1,5 +1,0 @@
-package br.senai.rn.agenda.dao;
-
-public abstract class GenericDAO<T extends PersistDB> {
-
-}
