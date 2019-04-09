@@ -1,10 +1,11 @@
 package br.senai.rn.locadora.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,27 +21,19 @@ public class LocadoraController {
 	
 	@GetMapping
 	public String index(Model model) {
-		model.addAttribute("locadora",new Locadora());
-		model.addAttribute("locadoras", service.BuscarTodos());
-		return "index";
+		Locadora locadora = new Locadora();
+		List<Locadora> locadoras = service.obterTodos();
+		model.addAttribute("locadora", locadora);
+		model.addAttribute("locadoras", locadoras);
+		return "categoria/index";
 	}
 	
 	@PostMapping
 	public String salvar(Locadora locadora) {
-		service.Salvar(locadora);
+		service.salvar(locadora);
 		return "redirect:/locadora";
 	}
 	
-	@GetMapping("/editar/{id}")
-	public String editar(@PathVariable Long id, Model model) {
-		model.addAttribute("locadora",service.Buscar(id));
-		model.addAttribute("locadoras", service.BuscarTodos());		
-		return "index";
-	}
 	
-	@GetMapping("/remover/{id}")
-	public String remover(@PathVariable Long id, Model model) {
-		service.removerPorId(id);
-		return "redirect:/locadora";
-	}
+	
 }

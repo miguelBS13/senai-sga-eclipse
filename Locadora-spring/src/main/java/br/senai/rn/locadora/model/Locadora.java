@@ -6,46 +6,42 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity(name = "Loc")
-@Table(name = "Locadora")
-public class Locadora implements Comparable<Locadora> {
+@Entity
+@Table(name = "Locadoras")
+public class Locadora extends AuditedEntity {
 
-	@Id
+	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String valor;
-	private Boolean ativo;
 	
-	@SuppressWarnings("deprecation")
-	public Locadora() {
-		ativo = new Boolean(true);
-	}
-	
+	@Override
 	public Long getId() {
 		return id;
 	}
+	
+	@Override
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
 	public String getNome() {
 		return nome;
 	}
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
 	public String getValor() {
 		return valor;
 	}
+	
 	public void setValor(String valor) {
 		this.valor = valor;
-	}	
-	public Boolean getAtivo() {
-		return ativo;
 	}
-	public void setAtivo(Boolean ativo) {
-		this.ativo = ativo;
-	}
+	
 	
 	@Override
 	public int hashCode() {
@@ -73,11 +69,6 @@ public class Locadora implements Comparable<Locadora> {
 	@Override
 	public String toString() {
 		return "Locadora [id=" + id + ", nome=" + nome + ", valor=" + valor + "]";
-	}
-	
-	@Override
-	public int compareTo(Locadora locadora) {
-		return this.id.compareTo(locadora.id);
 	}
 	
 }
