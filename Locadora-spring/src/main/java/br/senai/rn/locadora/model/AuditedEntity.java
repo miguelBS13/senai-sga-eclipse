@@ -12,6 +12,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import br.senai.rn.locadora.repositories.PersistableEntity;
 
 @MappedSuperclass
@@ -21,15 +23,18 @@ public abstract class AuditedEntity implements PersistableEntity<Long>, Comparab
 	@Column(name = "data_criacao", nullable = false, updatable = false)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.TIMESTAMP)
+	@JsonIgnore
 	private Date dataCriacao = new Date();
 	
 	@LastModifiedDate
 	@Column(name = "data_modificacao", nullable = true)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Temporal(TemporalType.TIMESTAMP)
+	@JsonIgnore
 	private Date dataModificacao;
 	
 	@Column(name = "ativo")
+	@JsonIgnore
 	private boolean ativo = true;
 
 	public Date getDataCriacao() {
