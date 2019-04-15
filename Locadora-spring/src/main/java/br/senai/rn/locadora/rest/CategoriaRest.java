@@ -8,23 +8,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.senai.rn.locadora.model.Locadora;
-import br.senai.rn.locadora.services.LocadoraService;
+import br.senai.rn.locadora.model.Categoria;
+import br.senai.rn.locadora.services.CategoriaService;
 
 @RestController
 @RequestMapping("/locadora")
 public class CategoriaRest {
 
 	@Autowired
-	private LocadoraService service;
+	private CategoriaService service;
 	
 	@GetMapping("/todos")
-	public List<Locadora> obterTodos(){
+	public List<Categoria> obterTodos(){
 		return service.obterTodos();
 	}
 	
 	@GetMapping("/{id}")
-	public Locadora obter(@PathVariable Long id) {
+	public Categoria obter(@PathVariable Long id) {
 		return service.obter(id);
 	}
 }

@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "filmes")
+@Table(name = "filme")
 public class Filme extends AuditedEntity {
 
 	@Id
@@ -20,7 +20,7 @@ public class Filme extends AuditedEntity {
 	private String descricao;
 	@ManyToOne
 	@JoinColumn(name = "id_categoria")
-	private Locadora categoria;
+	private Categoria categoria;
 	
 	@Override
 	public Long getId() {
@@ -37,7 +37,7 @@ public class Filme extends AuditedEntity {
 	}
 
 	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+		this.titulo = titulo.trim().toUpperCase();
 	}
 
 	public Integer getDuracao() {
@@ -53,14 +53,14 @@ public class Filme extends AuditedEntity {
 	}
 
 	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+		this.descricao = descricao.trim().toUpperCase();
 	}
 
-	public Locadora getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(Locadora categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
 
@@ -95,5 +95,4 @@ public class Filme extends AuditedEntity {
 				+ ", categoria=" + categoria + "]";
 	}
 
-	
 }

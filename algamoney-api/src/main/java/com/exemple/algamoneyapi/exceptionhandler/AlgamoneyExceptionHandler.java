@@ -85,4 +85,3 @@ public class AlgamoneyExceptionHandler extends ResponseEntityExceptionHandler {
 	}
 			
 }
-	
